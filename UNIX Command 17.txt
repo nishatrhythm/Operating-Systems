@@ -1,0 +1,56 @@
+1. Open Last Edited File in the Directory
+xdg-open "$(ls -t | head -n1)"
+
+2. Print System Information
+uname -s
+uname -n
+uname -r
+uname -v
+uname -m
+uname -i
+cat /etc/os-release | grep "PRETTY_NAME"
+
+3. Display File Content in Reverse Order
+tac filename.txt
+
+4. Display Current Date (dd/mm/yy)
+date +'%d/%m/%y'
+
+5. Display Date and Time (dd-mm-yy/hh.mm.ss)
+date +'%d-%m-%y/%H.%M.%S'
+
+6. Copy File from Desktop to Documents Directory
+cp ~/Desktop/file.txt ~/Documents/
+
+7. Create a Directory in Pictures
+mkdir ~/Pictures/My\ Photos
+
+8. Search for Lines Containing "credit" in a Memo File
+grep "credit" memo.txt
+
+9. Combine Contents of Two Files into a New File
+cat file1.txt file2.txt > combined.txt
+
+10. Remove Duplicate Lines from a Text File
+sort file.txt | uniq > newfile.txt
+
+11. Sort File Contents in Reverse Alphabetical Order
+sort -r data.txt
+
+12. Search for the String "the" in myfile.txt
+grep "the" myfile.txt
+
+13. Order Files Based on Last Modified Time in Reverse Order
+ls -lt --time=atime
+
+14. Recursively Remove Files and Directories
+rm -r example
+
+15. Display File Contents with Line Numbers
+nl filename.txt
+
+16. Create a Directory called "temp" under Home
+mkdir ~/temp
+
+17. View Network Interfaces and Status
+ip link show
