@@ -1,0 +1,157 @@
+BASIC UNIX COMMAND
+
+Ctrl + Alt + T
+Open Terminal
+
+• Clear terminal screen
+clear
+
+• Install Calendar
+sudo apt install ncal
+
+• Calendar
+cal
+
+• Today's Date
+date
+
+• Username
+uname
+
+• About Linux
+uname -a
+
+• Help (to know a command)
+help [command]
+
+• To change directory
+cd [Directory Name]
+
+• Go back to root
+[Current Directory Name] cd
+
+• Go to a nested folder
+[Current Directory Name] cd '[Desired nested folder name]'
+
+• See Folder content
+cd '[folder name]'
+ls
+
+• Create directory
+mkdir [folder name 1] [folder name 2] [folder name 3]
+Example: mkdir lab 3 lab_3 'lab 3'
+Total 4 folders, lab, 3, lab_3, lab 3.
+
+• Delete directory
+rmdir [folder name 1] [folder name 2] [folder name 3]
+Example: rmdir lab 3 lab_3 'lab 3'
+Remove 4 folders, lab, 3, lab_3, lab 3.
+
+• Create a file
+touch [filename with extension]
+
+• Copy a file
+cp [filename] [directory address where to copy]
+[Note: /home/rhythm/Desktop/]
+
+• Move a file
+mv [filename] [directory address where to move]
+[Note: /home/rhythm/Desktop/]
+
+• See content of a file
+cat [filename]
+
+• Compare files
+diff [filename1] [filename2]
+df [filename1] [filename2]
+
+• Install software
+sudo apt-get install [software name]
+
+• Ping of Website
+ping www.google.com
+ping 172.16.0.1
+
+• IP Config
+ifconfig
+
+• IP Address
+ip addr
+
+• Process Status
+ps
+
+• Machine Uptime
+uptime
+
+• Which command (where the commands are located)
+which cat
+which ls
+which -a cat
+which -a ls
+
+• Exit from terminal
+exit
+
+• tar archive
+tar -cvf [newname].tar [directory]
+[Note: Directory of targeted folder which I want to archive]
+
+• tar unarchive
+tar -xvf [filename].tar [destination]
+[Note: Destination is optional. Where I want to unarchive the .tar file.]
+
+• zip
+zip -r [newname].zip [directory]
+[Note: Directory of targeted folder which I want to archive]
+
+• unzip
+unzip [filename].zip [destination]
+[Note: Destination is optional. Where I want to unarchive the .tar file.]
+
+• Find or search in a directory [Case sensitive]
+find . -name [filename]
+find /home -name [filename, exactly what it is]
+
+• Find or search in a directory [Case insensitive]
+find /home -iname Test.tar (might be in capital letter)
+
+• Find or search in directory
+find . -type f -name [filename]
+
+• Find or search a specific type of file
+find . -type f -name "*.zip"
+
+• Find or search a specific word in a file
+grep "[word]" [filename]
+grep -w "[word]" [filename]
+•• To see the line numbers
+grep -n "[word]" [filename]
+••• Do not contain the word
+grep -v "[word]" [filename]
+••• Count the specific word
+grep -c "[word]" [filename]
+
+• Access Permission in a directory's files
+ls -l
+
+• Access Permission of a file
+ls -l [filename]
+
+• chmod
+w = write
+r = read
+x = execution permission
+g = group
+u = current user
+o = other users
+a = all users
+chmod u=x [filename] (execute permission)
+chmod u-x [filename] (remove execute permission)
+sudo chmod a=rw [filename] (read-write peermission)
+
+• Find and replace the file's content
+sed 's/[old word]/[new word]g' [filename]
+
+• Find and replace the file's content and save it in a new file
+sed 's/[old word]/[new word]g' [old filename] >[new filename]
