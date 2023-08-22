@@ -1,0 +1,67 @@
+chmod:
+
+We can use the -l (long format) option to have ls list the file permissions for files and directories.
+
+r: Read permissions. The file can be opened, and its content viewed.
+w: Write permissions. The file can be edited, modified, and deleted.
+x: Execute permissions. If the file is a script or a program, it can be run (executed).
+
+--- means no permissions have been granted at all.
+rwx means full permissions have been granted. The read, write, and execute indicators are all present.
+
+u: User, meaning the owner of the file.
+g: Group, meaning members of the group the file belongs to.
+o: Others, meaning people not governed by the u and g permissions.
+a: All, meaning all of the above.
+
+-: Minus sign. Removes the permission.
++: Plus sign. Grants the permission. The permission is added to the existing permissions. If you want to have this permission and only this permission set, use the = option, described below.
+=: Equals sign. Set a permission and remove others.
+
+r: The read permission.
+w: The write permission.
+x: The execute permission.
+
+Let's say we have a file where everyone has full permissions on it.
+ls -l new_ file.txt
+
+We want the user dave to have read and write permissions and the group and other users to have read permissions only. We can do using the following command:
+chmod u=rw,og=r new_file.txt
+
+Using the "=" operator means we wipe out any existing permissions and then set the ones specified.
+let's check the new permission on this file:
+ls -l new_file.txt
+
+Let's say we have a script file that we have finished editing. We need to make it executable for all users. Its current permissions look like this:
+ls -l new_script.sh
+
+We can add the execute permission for everyone with the following command:
+chmod a+x new_script.sh
+
+If we take a look at the permissions, we'll see that the execute permission is now granted to everyone, and the existing permissions are still in place.
+ls -l new_script.sh
+
+We could have achieved the same thing without the "a" in the "a+x" statement. The following command would have worked just as well.
+chmod +x new_script.sh
+
+These are the files in the current directory:
+ls -l
+
+Let's say we want to remove the read permissions for the "other" users from files that have a ".page" extension. We can do this with the following command:
+chmod o-r *.page
+
+If we had wanted to include files in subdirectories, we could have used the -R (recursive) option.
+chmod -R o-r *.page
+
+The digits you can use and what they represent are listed here:
+0: (000) No permission.
+1: (001) Execute permission.
+2: (010) Write permission.
+3: (011) Write and execute permissions.
+4: (100) Read permission.
+5: (101) Read and execute permissions.
+6: (110) Read and write permissions.
+7: (111) Read, write, and execute permissions.
+
+The following command will accomplish this:
+chmod 664 *.page

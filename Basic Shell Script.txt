@@ -1,0 +1,6 @@
+BASIC SHELL SCRIPT
+
+
+touch [filename].sh
+chmod +x [filename].sh
+./[filename].sh
