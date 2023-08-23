@@ -36,7 +36,103 @@
  <li>Write a shell script that takes a directory name as input and recursively finds and displays the total disk space used by each user within that directory.</li>
 </ol><br><br>
 
-<h1><b>Assignment</b></h1>
+
+# Basics UNIX Commands
+
+### 1. Open Last Edited File in the Directory
+```bash
+xdg-open "$(ls -t | head -n1)"
+```
+
+### 2. Print System Information
+```bash
+uname -s
+uname -n
+uname -r
+uname -v
+uname -m
+uname -i
+cat /etc/os-release | grep "PRETTY_NAME"
+```
+
+### 3. Display File Content in Reverse Order
+```bash
+tac filename.txt
+```
+
+### 4. Display Current Date (dd/mm/yy)
+```bash
+date +'%d/%m/%y'
+```
+
+### 5. Display Date and Time (dd-mm-yy/hh.mm.ss)
+```bash
+date +'%d-%m-%y/%H.%M.%S'
+```
+
+### 6. Copy File from Desktop to Documents Directory
+```bash
+cp ~/Desktop/file.txt ~/Documents/
+```
+
+### 7. Create a Directory in Pictures
+```bash
+mkdir ~/Pictures/My\ Photos
+```
+
+### 8. Search for Lines Containing "credit" in a Memo File
+```bash
+grep "credit" memo.txt
+```
+
+### 9. Combine Contents of Two Files into a New File
+```bash
+cat file1.txt file2.txt > combined.txt
+```
+
+### 10. Remove Duplicate Lines from a Text File
+```bash
+sort file.txt | uniq > newfile.txt
+```
+
+### 11. Sort File Contents in Reverse Alphabetical Order
+```bash
+sort -r data.txt
+```
+
+### 12. Search for the String "the" in myfile.txt
+```bash
+grep "the" myfile.txt
+```
+
+### 13. Order Files Based on Last Modified Time in Reverse Order
+```bash
+ls -lt --time=atime
+```
+
+### 14. Recursively Remove Files and Directories
+```bash
+rm -r example
+```
+
+### 15. Display File Contents with Line Numbers
+```bash
+nl filename.txt
+```
+
+### 16. Create a Directory called "temp" under Home
+```bash
+mkdir ~/temp
+```
+
+### 17. View Network Interfaces and Status
+```bash
+ip link show
+```
+
+<br><br>
+
+# Assignment
 Develop a shell script that simplifies the process of managing files and directories. This script automates common tasks like moving or renaming files, creating new directories, and deleting old files. It provides a basic yet effective solution for organizing and manipulating file systems efficiently.
 
 <h2><b>Features</b></h2>
