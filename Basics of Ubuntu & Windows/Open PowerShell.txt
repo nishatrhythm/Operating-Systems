@@ -1,0 +1,5 @@
+Open PowerShell at the specific location:
+Set-Location -Path "[folder/file path]"
+
+Or [SHIFT + Right button] of your mouse from the desired folder.
+You will see "Open PowerShell windows here".

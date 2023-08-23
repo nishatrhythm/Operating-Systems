@@ -1,4 +1,4 @@
-BASIC SHELL SCRIPT
+RUN SHELL SCRIPT
 
 
 touch [filename].sh

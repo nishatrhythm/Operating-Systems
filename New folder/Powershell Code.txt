@@ -1,2 +1,0 @@
-Powershell code:
-Set-Location -Path "[path]"
